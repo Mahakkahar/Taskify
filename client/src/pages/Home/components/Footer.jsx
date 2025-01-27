@@ -74,7 +74,7 @@ const Copyright = styled.p`
 function Footer() {
   return (
     <FooterContainer>
-      <Logo>VEXA</Logo>
+      <Logo>Taskify</Logo>
       <Nav>
         <NavLink href="#home">Home</NavLink>
         <NavLink href="#features">Features</NavLink>
@@ -88,7 +88,7 @@ function Footer() {
         <SocialMediaIcon href="#"><InstagramIcon /></SocialMediaIcon>
       </SocialMediaIcons>
       <Copyright>
-        &copy; 2023 Vexa. All rights reserved.
+        &copy; 2024 Taskify. All rights reserved.
       </Copyright>
     </FooterContainer>
   );

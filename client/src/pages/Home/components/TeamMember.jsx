@@ -58,11 +58,11 @@ const TeamMemberBio = styled.p`
   color: ${({ theme }) => theme.soft2};
 `;
 
-const TeamMember = ({ photo, name, title, bio }) => {
+const TeamMember = ({ name, title, bio }) => {
     return (
         <TeamMemberContainer>
             <Header>
-                <TeamMemberPhoto src={photo} alt={name} />
+                {/* <TeamMemberPhoto src={photo} alt={name} /> */}
                 <TeamMemberData>
                     <TeamMemberName>{name}</TeamMemberName>
                     <TeamMemberTitle>{title}</TeamMemberTitle>

@@ -1,11 +1,12 @@
 import express from 'express';
+// const express = require('express');
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import authRoutes from './routes/auth.js';
 import userRoutes from './routes/user.js';
 import projectRoutes from './routes/project.js';
 import teamRoutes from './routes/teams.js';
-import cookieParser from "cookie-parser";
+// import cookieParser from "cookie-parser";
 import cors from 'cors';
 import morgan from 'morgan';
 const app = express();
@@ -20,17 +21,23 @@ const corsConfig = {
 app.use(cors(corsConfig));
 app.use(morgan('tiny'));
 app.disable('x-powered-by');
-
 const port = process.env.PORT || 8700;
 
-const connect = () => {
-    mongoose.set('strictQuery', true);
-    mongoose.connect(process.env.MONGO_URL).then(() => {
-        console.log('MongoDB connected');
-    }).catch((err) => {
-        console.log(err);
-    });
+
+const connectDB = async () => {
+    try {
+        await mongoose.connect(process.env.MONGODB_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log('MongoDB connected successfully.');
+    } catch (error) {
+        console.error('MongoDB connection failed:', error.message);
+        process.exit(1); // Exit the process with failure
+    }
 };
+
+connectDB();
 
 
 app.use(express.json())
@@ -60,5 +67,5 @@ app.use((err, req, res, next)=>{
 
 app.listen(port,()=>{
     console.log("Connected")
-    connect();
+    connectDB();
 })

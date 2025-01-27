@@ -102,7 +102,7 @@ const StatsWrapper = Styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(250px, 1fr));
   grid-gap: 24px;
-  margin: 20px 0px;
+  margin: 20px 20px;
 `;
 
 const StatCard = Styled.div`
@@ -354,7 +354,7 @@ const Dashboard = ({ setNewProject, setNewTeam, newProject }) => {
                   <Progress>
                     <LinearProgress
                       sx={{
-                        borderRadius: "10px", height: 7, width: "80%"
+                        borderRadius: "10px", height: 7, width: "70%"
                       }}
                       variant="determinate"
                       value={
@@ -376,7 +376,7 @@ const Dashboard = ({ setNewProject, setNewTeam, newProject }) => {
                   <Title>Total Task Done</Title>
                   <Progress>
                     <LinearProgress
-                      sx={{ borderRadius: "10px", height: 7, width: "80%" }}
+                      sx={{ borderRadius: "10px", height: 7, width: "70%" }}
                       variant="determinate"
                       value={
                         totalTasksDone === 0

@@ -154,10 +154,10 @@ const Menu = ({ darkMode, setDarkMode, setMenuOpen, setNewTeam }) => {
     <Container setMenuOpen={setMenuOpen}>
       <Flex>
         <Link to="/" style={{ textDecoration: "none", color: "inherit", alignItems: 'center',display: 'flex' }}>
-          <Logo>
-            <Image src={LogoIcon} />
-            VEXA
-          </Logo>
+        <Logo>
+          <Image src="/assests/logo2.png"  alt="Taskify Logo" />
+          Taskify
+        </Logo>
         </Link>
         <Close>
           <CloseRounded onClick={() => setMenuOpen(false)} />

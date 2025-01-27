@@ -50,7 +50,7 @@ const Button = styled.button`
   border: 1px solid ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.primary};
   border-radius: 3px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -67,11 +67,11 @@ const Navbar = ({ setSignInOpen }) => {
 
   return (
     <Container>
-      <Logo>VEXA</Logo>
+      <Logo>Taskify</Logo>
       <Menu>
         <MenuItem href="#home">Home</MenuItem>
         <MenuItem href="#features">Features</MenuItem>
-        <MenuItem href="#benefits">Benifits</MenuItem>
+        <MenuItem href="#benefits">Benefits</MenuItem>
         <MenuItem href="#team">Team</MenuItem>
       </Menu>
       <Button onClick={() => setSignInOpen(true)}>
